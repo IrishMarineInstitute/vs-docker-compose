@@ -19,10 +19,10 @@ elasticsearch:
 pipeline:
     image: "informaticsmarine/pipeline"
     environment:
-    --user='InformaticsLoadSQL'
+    - user='InformaticsLoadSQL'
     environment:
-    --password='-sQnuF:~uAy<33`~'
+    - password='-sQnuF:~uAy<33`~'
     environment:
-    --sql='vminformdev01'
+    - sql='vminformdev01'
     environment:
-    --ESurl='http://10.11.1.70:9200/'
+    - ESurl='http://10.11.1.70:9200/'
