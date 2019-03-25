@@ -1,28 +1,28 @@
 version: '1'
 services:
-	angular:
-		image: "informaticsmarine/vessel-search"
-			ports:
-			- "80:80"
-			restart: unless-stopped
-	elasticsearch:
-		image: "informaticsmarine/allvessels"
-			ports:
-			- "9200:9200"
-			environment:
-			- "discovery.type=single-node"
-			environment:
-			- "http.cors.enabled=true"
-			environment:
-			- "http.cors.allow-origin=*"
-			restart: unless-stopped
-	pipeline:
-		image: "informaticsmarine/pipeline"
-			environment:
-			--user='InformaticsLoadSQL'
-			environment:
-			--password='-sQnuF:~uAy<33`~'
-			environment:
-			--sql='vminformdev01'
-			environment:
-			--ESurl='http://10.11.1.70:9200/'
+    angular:
+    image: "informaticsmarine/vessel-search"
+    ports:
+    - "80:80"
+    restart: unless-stopped
+elasticsearch:
+    image: "informaticsmarine/allvessels"
+    ports:
+    - "9200:9200"
+    environment:
+    - "discovery.type=single-node"
+    environment:
+    - "http.cors.enabled=true"
+    environment:
+    - "http.cors.allow-origin=*"
+    restart: unless-stopped
+pipeline:
+    image: "informaticsmarine/pipeline"
+    environment:
+    --user='InformaticsLoadSQL'
+    environment:
+    --password='-sQnuF:~uAy<33`~'
+    environment:
+    --sql='vminformdev01'
+    environment:
+    --ESurl='http://10.11.1.70:9200/'
