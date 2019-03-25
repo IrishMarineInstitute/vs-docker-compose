@@ -14,10 +14,3 @@ services:
             - "http.cors.enabled=true"
             - "http.cors.allow-origin=*"
         restart: unless-stopped
-    pipeline:
-        image: "informaticsmarine/pipeline"
-        environment:
-            - user='InformaticsLoadSQL'
-            - password='-sQnuF:~uAy<33`~'
-            - sql='vminformdev01'
-            - ESurl='http://10.11.1.70:9200/'
